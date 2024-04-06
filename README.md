@@ -11,3 +11,9 @@
 
 ### aula 4 - resolvendo mais exercícios beecrowd
 - 20/03 
+
+### aula 5 - collections e list 
+- 27/03
+
+### aula 6 - prova 
+- 03/04
