@@ -1,0 +1,46 @@
+Requisições HTTP Java:
+
+@WebServlet ("/ hello ")
+2 public class HelloServlet extends HttpServlet {
+3 protected void doGet ( HttpServletRequest request , HttpServletResponse
+
+response )
+
+4 throws ServletException , IOException {
+5 request . setAttribute (" message ", " Hello ␣ from ␣ Servlet !");   //enviando por exemplo um atributo mensagem do tipo mensagem
+6 RequestDispatcher dispatcher =
+
+request . getRequestDispatcher (" hello .jsp ");
+7 dispatcher . forward ( request , response ) ;
+8 }
+9 }
+
+<! -- hello .jsp -->
+2 <html >
+3 <head ><title > Hello Page </ title ></ head >
+4 <body >
+5 <h1 >${ message } </h1 >
+6 </ body >
+7 </ html >
+
+
+Considerações de Segurança:
+
+Validação de entrada pra previnir injeção de código 
+Autenticação e autorização 
+-> controle de acesso baseado em roles, web.xml
+-> ex: login (formulário)
+Uso de HTTPS para proteger dados em trânsito 
+Tratamento adequado de sessões
+
+
+Melhorando o Desempenho:
+java é muito escalável, consegue atender a muitas pessoas com muitos recursos
+cache - dados armazenados dinamicamente
+otimização de consulta de dados - ex: paginação
+
+Escalabilidade da Aplicação
+clustering de servidores
+-> escalar as máquinas tantos de forma vertical (aumentar o poder dela) quanto horizontal (qtd de máquinas)
+balanceamento de carga  entre as máquinas 
+uso de serviços de nuvem para aumentar espaço de armazenamento 
